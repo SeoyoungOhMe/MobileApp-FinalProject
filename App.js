@@ -21,7 +21,7 @@ function TestScreen1({ navigation }) {
 
   return (
     <View>
-      <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다.</Text>
+      <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다고 생각한다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -185,19 +185,19 @@ function ResultScreen({ navigation, route }) {
 
 function MZScreen(){
   return(
-    <Text>당신은 MZ입니다</Text>
+    <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
   )
 }
 
 function MiddleScreen(){
   return(
-    <Text>당신은 잠재적 꼰대입니다</Text>
+    <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
   )
 }
 
 function AbsoluteScreen(){
   return(
-    <Text>당신은 완전 꼰대입니다</Text>
+    <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
   )
 }
 
@@ -231,9 +231,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title_st: {
-    fontSize:50, margin:10
+    fontSize:50,
+    margin:10
   },
   text_st: {
-    fontSize:30, margin:10
+    fontSize:30, 
+    margin:10,
   },
+  title2_st: {
+    fontSize: 40,
+    margin: 10,
+  }
 });
