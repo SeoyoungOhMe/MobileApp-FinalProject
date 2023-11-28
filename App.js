@@ -36,6 +36,11 @@ function TestScreen() {
   return (
     <View>
       <Question content="1. '나 정도면 꼰대 아니지 않나?'라는 생각을 한 적이 있다." />
+      <Question content="2. " />
+      <Question content="3. " />
+      <Question content="4. " />
+      <Question content="5. " />
+      <Question content="6. " />
     </View>
   );
 }
