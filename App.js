@@ -18,13 +18,14 @@ function StartScreen({ navigation }) {
 function TestScreen1({ navigation }) {
 
   const [count, setCount] = useState(0);
+  const [refresh, setRefresh] = useState(0);
 
   return (
     <View>
-      <Text style={styles.text_st}>1. "나 정도면 꼰대 아니지 않아?"라고 생각한 적이 있다.</Text>
+      <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
-          onPress={ function(){ setCount(count + 1); navigation.navigate('Test2', { count }); } } />
+          onPress={ function(){ setCount(count + 1); setRefresh(refresh+1); navigation.navigate('Test2', { count }); } } />
         <Button title="아니요"
           onPress={ function(){ navigation.navigate('Test2', { count }); } } />  
       </View>
@@ -47,12 +48,10 @@ function TestScreen2({ navigation, route }) {
         <Button title="네"
           onPress={ function(){ 
             setCount2(count2 + 1); 
-            alert(count2);
             navigation.navigate('Test3', { count2 }); 
             } } />
         <Button title="아니요"
           onPress={ function(){ 
-            alert(count2);
             navigation.navigate('Test3', { count2 } ); 
           } } />  
       </View>
@@ -67,14 +66,10 @@ function TestScreen3({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count2}</Text>
-      <Text>{count3}</Text>
-
-      <Text style={styles.text_st}>3. 내 의견과 반대되는 의견을 내는 사람이 못마땅하다.</Text>
+      <Text style={styles.text_st}>3. 나보다 늦게 출근하는 후배가 거슬린다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            alert(count);alert(count3);
             setCount3(count3 + 1); 
             navigation.navigate('Test4', { count3 }); 
           } } />
@@ -88,30 +83,78 @@ function TestScreen3({ navigation, route }) {
 }
 
 function TestScreen4({ navigation, route }) {
+
+  const { count3 } = route.params;
+  const [count4, setCount4] = useState(count3);
+
   return (
     <View>
-      
+      <Text style={styles.text_st}>4. "우리 때는 안 그랬는데..." 싶을 때가 있다.</Text>
+      <View style={{margin:10, flexDirection:"row"}}>
+        <Button title="네"
+          onPress={ function(){ 
+            setCount4(count4 + 1); 
+            navigation.navigate('Test5', { count4 }); 
+          } } />
+        <Button title="아니요"
+          onPress={ function(){ 
+            navigation.navigate('Test5', { count4 } ); 
+            } } />  
+      </View>
     </View>
   );
 }
 
 function TestScreen5({ navigation, route }) {
+
+  const { count4 } = route.params;
+  const [count5, setCount5] = useState(count4);
+
   return (
     <View>
-      
+      <Text style={styles.text_st}>5. 후배들을 위한 충고도 그 후배가 잘 되길 바라는 마음으로 하는 말이다.</Text>
+      <View style={{margin:10, flexDirection:"row"}}>
+        <Button title="네"
+          onPress={ function(){ 
+            setCount5(count5 + 1); 
+            navigation.navigate('Test6', { count5 }); 
+          } } />
+        <Button title="아니요"
+          onPress={ function(){ 
+            navigation.navigate('Test6', { count5 } ); 
+            } } />  
+      </View>
     </View>
   );
 }
 
 function TestScreen6({ navigation, route }) {
+
+  const { count5 } = route.params;
+  const [count6, setCount6] = useState(count5);
+
   return (
     <View>
-      
+      <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
+      <View style={{margin:10, flexDirection:"row"}}>
+        <Button title="네"
+          onPress={ function(){ 
+            setCount6(count6 + 1); 
+            navigation.navigate('Result', { count6 }); 
+          } } />
+        <Button title="아니요"
+          onPress={ function(){ 
+            navigation.navigate('Result', { count6 } ); 
+            } } />  
+      </View>
     </View>
   );
 }
 
-function ResultScreen() {
+function ResultScreen({ navigation, route }) {
+
+  const { count6 } = route.params;
+
   return (
     <View>
 
