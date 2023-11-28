@@ -15,23 +15,27 @@ function StartScreen({ navigation }) {
   );
 }
 
-// function question(props) {
-  
-// }
-
-function TestScreen() {
+function Question(props) {
 
   const [ count, setCount ] = useState(0);
 
   return (
     <View>
-      <Text style={styles.text_st}>"1. 나 정도면 꼰대 아니지 않아?"라는 생각을 한 적이 있다.</Text>
+      <Text style={styles.text_st}>{props.content}</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ setCount(count+1); } } />
         <Button title="아니요"
           onPress={ function(){  } } />  
       </View>
+    </View>
+  )
+}
+
+function TestScreen() {
+  return (
+    <View>
+      <Question content="1. '나 정도면 꼰대 아니지 않나?'라는 생각을 한 적이 있다." />
     </View>
   );
 }
