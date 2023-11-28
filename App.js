@@ -47,8 +47,6 @@ function TestScreen2({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count}</Text>
-
       <Text style={styles.text_st}>2. 처음 만났지만 나보다 나이가 어리면 반말을 한다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
@@ -75,8 +73,6 @@ function TestScreen3({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count2}</Text>
-
       <Text style={styles.text_st}>3. 나보다 늦게 출근하는 후배가 거슬린다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
@@ -103,8 +99,6 @@ function TestScreen4({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count3}</Text>
-
       <Text style={styles.text_st}>4. "우리 때는 안 그랬는데..." 싶을 때가 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
@@ -131,8 +125,6 @@ function TestScreen5({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count4}</Text>
-
       <Text style={styles.text_st}>5. 후배들을 위한 충고도 그 후배가 잘 되길 바라는 마음으로 하는 말이다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
@@ -159,8 +151,6 @@ function TestScreen6({ navigation, route }) {
 
   return (
     <View>
-      <Text>{count5}</Text>
-
       <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
@@ -184,15 +174,32 @@ function ResultScreen({ navigation, route }) {
 
   const { count6 } = route.params;
 
-  return (
-    <View>
-      <Text>{count6}</Text>
-    </View>
-  );
+  if (count6 == 0) {
+    navigation.navigate('MZ');
+  } else if ( count6>0 && count6<=3) {
+    navigation.navigate('Middle');
+  } else {
+    navigation.navigate('Absolute');
+  }
 }
 
+function MZScreen(){
+  return(
+    <Text>당신은 MZ입니다</Text>
+  )
+}
 
+function MiddleScreen(){
+  return(
+    <Text>당신은 잠재적 꼰대입니다</Text>
+  )
+}
 
+function AbsoluteScreen(){
+  return(
+    <Text>당신은 완전 꼰대입니다</Text>
+  )
+}
 
 const Stack = createStackNavigator();
 
@@ -208,6 +215,9 @@ export default function App() {
         <Stack.Screen name="Test5" component={TestScreen5} />
         <Stack.Screen name="Test6" component={TestScreen6} />
         <Stack.Screen name="Result" component={ResultScreen} />
+        <Stack.Screen name="MZ" component={MZScreen} />
+        <Stack.Screen name="Middle" component={MiddleScreen} />
+        <Stack.Screen name="Absolute" component={AbsoluteScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
