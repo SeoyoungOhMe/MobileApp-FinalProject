@@ -185,19 +185,46 @@ function ResultScreen({ navigation, route }) {
 
 function MZScreen(){
   return(
-    <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
+    <View>
+      <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
+
+      <Text style={styles.text_st}>
+        당신은 격변하는 사회 속에서 적응하고 자신만의 영역을 확장해나가는 삶을 추구하는 사람입니다. 
+        집단보다는 개인의 행복을, 소유보다는 공유를, 계획보다는 경험을 중시하죠.  
+        변화를 추구하고 자유로움을 추구하며, 최신 트렌드를 주도하고 확산시키는 특징이 있습니다.
+        또한 SNS를 기반으로 자신의 생각과 주장을 타인과 공유하고 강력한 영향력을 발휘합니다.
+      </Text>
+    </View>
   )
 }
 
 function MiddleScreen(){
   return(
-    <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
+    <View>
+      <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
+
+      <Text style={styles.text_st}>
+        당신은 꼰대의 기질을 다분히 가지고 있는 사람입니다.
+        새로운 아이디어와 트렌드에 따라가기는 하나, 적응하기 어려워하는 특징이 있습니다.
+        또한 다른 사람들의 경험과 가치관을 이해하는 한편, 본인의 가치관을 강요하기도 합니다.
+
+      </Text>
+    </View>
   )
 }
 
 function AbsoluteScreen(){
   return(
-    <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
+    <View>
+      <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
+
+      <Text style={styles.text_st}>
+        당신은 꼰대일 가능성이 농후합니다.
+        자신의 의견이나 가치관을 고집스럽게 지키고, 보수적인 태도를 유지하는 경향이 높을 수 있습니다.
+        또는 새로운 아이디어나 문화적 트렌드에 대해 열린 태도를 가지지 않고 SNS 등에 거부감을 드러낼 수 있습니다.
+        타인의 의견을 존중하고, 다른 세대와 소통하는 것이 필요합니다.
+      </Text>
+    </View>
   )
 }
 
