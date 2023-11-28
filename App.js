@@ -18,16 +18,23 @@ function StartScreen({ navigation }) {
 function TestScreen1({ navigation }) {
 
   const [count, setCount] = useState(0);
-  const [refresh, setRefresh] = useState(0);
 
   return (
     <View>
       <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
-          onPress={ function(){ setCount(count + 1); setRefresh(refresh+1); navigation.navigate('Test2', { count }); } } />
+          onPress={ function(){ 
+            setCount((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test2', { count: updatedCount });
+              return updatedCount;
+            });
+          } } />
         <Button title="아니요"
-          onPress={ function(){ navigation.navigate('Test2', { count }); } } />  
+          onPress={ function(){ 
+            navigation.navigate('Test2', { count }); 
+            } } />  
       </View>
     </View>
   );
@@ -41,15 +48,17 @@ function TestScreen2({ navigation, route }) {
   return (
     <View>
       <Text>{count}</Text>
-      <Text>{count2}</Text>
 
       <Text style={styles.text_st}>2. 처음 만났지만 나보다 나이가 어리면 반말을 한다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            setCount2(count2 + 1); 
-            navigation.navigate('Test3', { count2 }); 
-            } } />
+            setCount2((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test3', { count2: updatedCount });
+              return updatedCount;
+            });
+          } } />
         <Button title="아니요"
           onPress={ function(){ 
             navigation.navigate('Test3', { count2 } ); 
@@ -66,12 +75,17 @@ function TestScreen3({ navigation, route }) {
 
   return (
     <View>
+      <Text>{count2}</Text>
+
       <Text style={styles.text_st}>3. 나보다 늦게 출근하는 후배가 거슬린다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            setCount3(count3 + 1); 
-            navigation.navigate('Test4', { count3 }); 
+            setCount3((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test4', { count3: updatedCount });
+              return updatedCount;
+            });
           } } />
         <Button title="아니요"
           onPress={ function(){ 
@@ -89,12 +103,17 @@ function TestScreen4({ navigation, route }) {
 
   return (
     <View>
+      <Text>{count3}</Text>
+
       <Text style={styles.text_st}>4. "우리 때는 안 그랬는데..." 싶을 때가 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            setCount4(count4 + 1); 
-            navigation.navigate('Test5', { count4 }); 
+            setCount4((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test5', { count4: updatedCount });
+              return updatedCount;
+            });
           } } />
         <Button title="아니요"
           onPress={ function(){ 
@@ -112,12 +131,17 @@ function TestScreen5({ navigation, route }) {
 
   return (
     <View>
+      <Text>{count4}</Text>
+
       <Text style={styles.text_st}>5. 후배들을 위한 충고도 그 후배가 잘 되길 바라는 마음으로 하는 말이다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            setCount5(count5 + 1); 
-            navigation.navigate('Test6', { count5 }); 
+            setCount5((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test6', { count5: updatedCount });
+              return updatedCount;
+            });
           } } />
         <Button title="아니요"
           onPress={ function(){ 
@@ -135,12 +159,17 @@ function TestScreen6({ navigation, route }) {
 
   return (
     <View>
+      <Text>{count5}</Text>
+
       <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
-            setCount6(count6 + 1); 
-            navigation.navigate('Result', { count6 }); 
+            setCount6((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Result', { count6: updatedCount });
+              return updatedCount;
+            });
           } } />
         <Button title="아니요"
           onPress={ function(){ 
@@ -157,7 +186,7 @@ function ResultScreen({ navigation, route }) {
 
   return (
     <View>
-
+      <Text>{count6}</Text>
     </View>
   );
 }
