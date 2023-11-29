@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -9,6 +9,8 @@ function StartScreen({ navigation }) {
     <View>
       <Text style={styles.title_st}>꼰대 테스트</Text>
       <View style={{height:50}}></View>
+      <Image style={{width:200, height:200}} 
+        source={require('./assets/startpage-img.png')} />
       <Button title="테스트 시작하기"
         onPress={ function(){ navigation.navigate('Test1') } } />
     </View>
