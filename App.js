@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, Dimensions, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -12,14 +12,23 @@ const imageHeight = width / aspectRatio;
 
 function StartScreen({ navigation }) {
   return (
-    <View>
+    <View style={{flex:1, alignItems: 'center', justifyContent: 'center', backgroundColor:'pink', }}>
       <Text style={styles.title_st}>꼰대 테스트</Text>
+
       <View style={{height:50}}></View>
+
       <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/startpage-img.png')} />
+
       <View style={{height:50}}></View>
-      <Button title="테스트 시작하기"
-        onPress={ function(){ navigation.navigate('Test1') } } />
+
+      <TouchableOpacity style={styles.button_st} 
+        onPress={function(){ navigation.navigate('Test1') } } >
+        <Text style={{ fontSize: 50, color: 'white', padding: 10 }}>
+          테스트 시작하기
+        </Text>
+      </TouchableOpacity>
+      
     </View>
   );
 }
@@ -283,7 +292,8 @@ const styles = StyleSheet.create({
   },
   title_st: {
     fontSize:50,
-    margin:10
+    margin:10,
+    fontWeight: 'bold',
   },
   text_st: {
     fontSize:30, 
@@ -292,5 +302,14 @@ const styles = StyleSheet.create({
   title2_st: {
     fontSize: 40,
     margin: 10,
+  },
+  button_st: {
+    margin:10,
+    fontSize:50,
+    padding:10,
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
+
 });
