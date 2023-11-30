@@ -305,10 +305,15 @@ function ResultScreen({ navigation, route }) {
 
 function MZScreen(){
   return(
-    <View>
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
+
+      <View style={{ height: 10 }}></View>
       <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/MZ.png')} />
+
+      <View style={{ height: 20 }}></View>
       <Text style={styles.text_st}>
         당신은 격변하는 사회 속에서 적응하고 자신만의 영역을 확장해나가는 삶을 추구하는 사람입니다. 
         집단보다는 개인의 행복을, 소유보다는 공유를, 계획보다는 경험을 중시하죠.  
@@ -321,15 +326,19 @@ function MZScreen(){
 
 function MiddleScreen(){
   return(
-    <View>
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
+
+      <View style={{ height: 10 }}></View>
       <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/Middle.png')} />
+
+      <View style={{ height: 20 }}></View>
       <Text style={styles.text_st}>
         당신은 꼰대의 기질을 다분히 가지고 있는 사람입니다.
         새로운 아이디어와 트렌드에 따라가기는 하나, 적응하기 어려워하는 특징이 있습니다.
         또한 다른 사람들의 경험과 가치관을 이해하는 한편, 본인의 가치관을 강요하기도 합니다.
-
       </Text>
     </View>
   )
@@ -337,10 +346,15 @@ function MiddleScreen(){
 
 function AbsoluteScreen(){
   return(
-    <View>
+    <View style={{ flex: 1, alignItems: 'center' }}>
+      <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
+
+      <View style={{ height: 10 }}></View>
       <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/Absol.png')} />
+
+      <View style={{ height: 20 }}></View>
       <Text style={styles.text_st}>
         당신은 꼰대일 가능성이 농후합니다.
         자신의 의견이나 가치관을 고집스럽게 지키고, 보수적인 태도를 유지하는 경향이 높을 수 있습니다.
