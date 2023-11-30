@@ -37,7 +37,7 @@ function TestScreen1({ navigation }) {
   const [count, setCount] = useState(0);
 
   return (
-    <View style={{flex:1, alignItems: 'center', }}>
+    <View style={{flex:1, alignItems: 'center', backgroundColor:'gray', }}>
       <View style={{height:50}}></View>
       <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다고 생각한다.</Text>
       
@@ -81,7 +81,7 @@ function TestScreen2({ navigation, route }) {
   const [count2, setCount2] = useState(count);
 
   return (
-    <View style={{flex:1, alignItems: 'center', }}>
+    <View style={{flex:1, alignItems: 'center', backgroundColor:'pink', }}>
       <View style={{height:50}}></View>
       <Text style={styles.text_st}>2. 처음 만났지만 나보다 나이가 어리면 반말을 한다.</Text>
       
@@ -124,7 +124,7 @@ function TestScreen3({ navigation, route }) {
   const [count3, setCount3] = useState(count2);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'pink',  }}>
       <View style={{ height: 50 }}></View>
       <Text style={styles.text_st}>3. 나보다 늦게 출근하는 후배가 거슬린다.</Text>
 
@@ -167,7 +167,7 @@ function TestScreen4({ navigation, route }) {
   const [count4, setCount4] = useState(count3);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'skyblue', }}>
       <View style={{ height: 50 }}></View>
       <Text style={styles.text_st}>4. "우리 때는 안 그랬는데..." 싶을 때가 있다.</Text>
       
@@ -210,7 +210,7 @@ function TestScreen5({ navigation, route }) {
   const [count5, setCount5] = useState(count4);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'skyblue',  }}>
       <View style={{ height: 50 }}></View>
       <Text style={styles.text_st}>5. 후배들을 위한 충고도 그 후배가 잘 되길 바라는 마음으로 하는 말이다.</Text>
       
@@ -253,7 +253,7 @@ function TestScreen6({ navigation, route }) {
   const [count6, setCount6] = useState(count5);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'yellow',  }}>
       <View style={{ height: 50 }}></View>
       <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
       
@@ -305,7 +305,7 @@ function ResultScreen({ navigation, route }) {
 
 function MZScreen(){
   return(
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'yellow', }}>
       <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
 
@@ -326,7 +326,7 @@ function MZScreen(){
 
 function MiddleScreen(){
   return(
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'pink',  }}>
       <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
 
@@ -346,7 +346,7 @@ function MiddleScreen(){
 
 function AbsoluteScreen(){
   return(
-    <View style={{ flex: 1, alignItems: 'center' }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'orange', }}>
       <View style={{ height: 10 }}></View>
       <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
 
