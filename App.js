@@ -12,20 +12,19 @@ const imageHeight = width / aspectRatio;
 
 function StartScreen({ navigation }) {
   return (
-    <View style={{flex:1, alignItems: 'center', justifyContent: 'center', backgroundColor:'pink', }}>
+    <View style={{flex:1, alignItems: 'center', backgroundColor:'pink', }}>
+      <View style={{height:50}}></View>
       <Text style={styles.title_st}>꼰대 테스트</Text>
 
       <View style={{height:50}}></View>
-
       <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/startpage-img.png')} />
 
-      <View style={{height:50}}></View>
-
+      <View style={{height:70}}></View>
       <TouchableOpacity style={styles.button_st} 
         onPress={function(){ navigation.navigate('Test1') } } >
         <Text style={{ fontSize: 50, color: 'white', padding: 10 }}>
-          테스트 시작하기
+          Test Start !
         </Text>
       </TouchableOpacity>
       
