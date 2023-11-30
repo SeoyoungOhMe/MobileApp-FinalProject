@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, Image } from 'react-native';
+import { StyleSheet, Text, View, Button, Image, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+
+const { width } = Dimensions.get('window');
+const originalImageWidth = 2360;
+const originalImageHeight = 1640;
+const aspectRatio = originalImageWidth / originalImageHeight;
+const imageHeight = width / aspectRatio;
 
 function StartScreen({ navigation }) {
   return (
     <View>
       <Text style={styles.title_st}>꼰대 테스트</Text>
       <View style={{height:50}}></View>
-      <Image style={{width:200, height:200}} 
+      <Image style={{width: width, height: imageHeight}} 
         source={require('./assets/startpage-img.png')} />
       <View style={{height:50}}></View>
       <Button title="테스트 시작하기"
@@ -25,6 +31,8 @@ function TestScreen1({ navigation }) {
   return (
     <View>
       <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다고 생각한다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q1.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -51,6 +59,8 @@ function TestScreen2({ navigation, route }) {
   return (
     <View>
       <Text style={styles.text_st}>2. 처음 만났지만 나보다 나이가 어리면 반말을 한다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q2.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -77,6 +87,8 @@ function TestScreen3({ navigation, route }) {
   return (
     <View>
       <Text style={styles.text_st}>3. 나보다 늦게 출근하는 후배가 거슬린다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q3.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -103,6 +115,8 @@ function TestScreen4({ navigation, route }) {
   return (
     <View>
       <Text style={styles.text_st}>4. "우리 때는 안 그랬는데..." 싶을 때가 있다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q4.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -129,6 +143,8 @@ function TestScreen5({ navigation, route }) {
   return (
     <View>
       <Text style={styles.text_st}>5. 후배들을 위한 충고도 그 후배가 잘 되길 바라는 마음으로 하는 말이다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q5.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -155,6 +171,8 @@ function TestScreen6({ navigation, route }) {
   return (
     <View>
       <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q6.png')} />
       <View style={{margin:10, flexDirection:"row"}}>
         <Button title="네"
           onPress={ function(){ 
@@ -190,7 +208,8 @@ function MZScreen(){
   return(
     <View>
       <Text style={styles.title2_st}>당신은 MZ입니다.</Text>
-
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/MZ.png')} />
       <Text style={styles.text_st}>
         당신은 격변하는 사회 속에서 적응하고 자신만의 영역을 확장해나가는 삶을 추구하는 사람입니다. 
         집단보다는 개인의 행복을, 소유보다는 공유를, 계획보다는 경험을 중시하죠.  
@@ -205,7 +224,8 @@ function MiddleScreen(){
   return(
     <View>
       <Text style={styles.title2_st}>당신은 잠재적 꼰대입니다.</Text>
-
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Middle.png')} />
       <Text style={styles.text_st}>
         당신은 꼰대의 기질을 다분히 가지고 있는 사람입니다.
         새로운 아이디어와 트렌드에 따라가기는 하나, 적응하기 어려워하는 특징이 있습니다.
@@ -220,7 +240,8 @@ function AbsoluteScreen(){
   return(
     <View>
       <Text style={styles.title2_st}>당신은 완전 꼰대입니다.</Text>
-
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Absol.png')} />
       <Text style={styles.text_st}>
         당신은 꼰대일 가능성이 농후합니다.
         자신의 의견이나 가치관을 고집스럽게 지키고, 보수적인 태도를 유지하는 경향이 높을 수 있습니다.
