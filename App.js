@@ -11,6 +11,7 @@ function StartScreen({ navigation }) {
       <View style={{height:50}}></View>
       <Image style={{width:200, height:200}} 
         source={require('./assets/startpage-img.png')} />
+      <View style={{height:50}}></View>
       <Button title="테스트 시작하기"
         onPress={ function(){ navigation.navigate('Test1') } } />
     </View>
