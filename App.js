@@ -37,7 +37,7 @@ function TestScreen1({ navigation }) {
   const [count, setCount] = useState(0);
 
   return (
-    <View style={{flex:1, alignItems: 'center', backgroundColor:'gray', }}>
+    <View style={{flex:1, alignItems: 'center', backgroundColor:'lightgray', }}>
       <View style={{height:50}}></View>
       <Text style={styles.text_st}>1. 사생활 이야기도 인생 선배로서 답을 제시해 줄 수 있다고 생각한다.</Text>
       
@@ -253,7 +253,7 @@ function TestScreen6({ navigation, route }) {
   const [count6, setCount6] = useState(count5);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'yellow',  }}>
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'lightyellow',  }}>
       <View style={{ height: 50 }}></View>
       <Text style={styles.text_st}>6. 일은 열심히 하다 보면 야근은 당연히 할 수 있다.</Text>
       
@@ -269,7 +269,7 @@ function TestScreen6({ navigation, route }) {
           onPress={ function(){ 
             setCount6((prevCount) => {
               const updatedCount = prevCount + 1;
-              navigation.navigate('Result', { count6: updatedCount });
+              navigation.navigate('Test7', { count6: updatedCount });
               return updatedCount;
             });
           } } >
@@ -281,7 +281,7 @@ function TestScreen6({ navigation, route }) {
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
           onPress={ function(){ 
-            navigation.navigate('Result', { count6 } ); 
+            navigation.navigate('Test7', { count6 } ); 
             } } >
             <Text style={{ color: 'white', fontSize: 30 }}>아니요</Text>
         </TouchableOpacity>
@@ -290,13 +290,186 @@ function TestScreen6({ navigation, route }) {
   );
 }
 
-function ResultScreen({ navigation, route }) {
+function TestScreen7({ navigation, route }) {
 
   const { count6 } = route.params;
+  const [count7, setCount7] = useState(count6);
 
-  if (count6 == 0) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'pink',  }}>
+      <View style={{ height: 50 }}></View>
+      <Text style={styles.text_st}>7. 휴가는 가더라도 카톡 답은 해야 한다.</Text>
+      
+      <View style={{ height: 50 }}></View>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q7.png')} />
+      
+      <View style={{ height: 70 }}></View>
+      <View style={{margin:10, flexDirection:"row"}}>
+        
+      <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            setCount7((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test8', { count7: updatedCount });
+              return updatedCount;
+            });
+          } } >
+          <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 50 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            navigation.navigate('Test8', { count7 } ); 
+            } } >
+            <Text style={{ color: 'white', fontSize: 30 }}>아니요</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+function TestScreen8({ navigation, route }) {
+
+  const { count7 } = route.params;
+  const [count8, setCount8] = useState(count7);
+
+  return (
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'lightyellow',  }}>
+      <View style={{ height: 50 }}></View>
+      <Text style={styles.text_st}>8. 후배들에게 “나도 쿨하다”라고 어필한다.</Text>
+      
+      <View style={{ height: 50 }}></View>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q8.png')} />
+      
+      <View style={{ height: 70 }}></View>
+      <View style={{margin:10, flexDirection:"row"}}>
+        
+      <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            setCount8((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test9', { count8: updatedCount });
+              return updatedCount;
+            });
+          } } >
+          <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 50 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            navigation.navigate('Test9', { count8 } ); 
+            } } >
+            <Text style={{ color: 'white', fontSize: 30 }}>아니요</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+function TestScreen9({ navigation, route }) {
+
+  const { count8 } = route.params;
+  const [count9, setCount9] = useState(count8);
+
+  return (
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'pink',  }}>
+      <View style={{ height: 50 }}></View>
+      <Text style={styles.text_st}>9. 더 나은 방법이 있더라도 기존의 방식을 고수하는 편이다.</Text>
+      
+      <View style={{ height: 50 }}></View>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q9.png')} />
+      
+      <View style={{ height: 70 }}></View>
+      <View style={{margin:10, flexDirection:"row"}}>
+        
+      <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            setCount9((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Test10', { count9: updatedCount });
+              return updatedCount;
+            });
+          } } >
+          <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 50 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            navigation.navigate('Test10', { count9 } ); 
+            } } >
+            <Text style={{ color: 'white', fontSize: 30 }}>아니요</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+function TestScreen10({ navigation, route }) {
+
+  const { count9 } = route.params;
+  const [count10, setCount10] = useState(count9);
+
+  return (
+    <View style={{ flex: 1, alignItems: 'center', backgroundColor:'lightgray',  }}>
+      <View style={{ height: 50 }}></View>
+      <Text style={styles.text_st}>10. 예전에는 더 심했으니 참고 이겨내라는 말을 한 적이 있다.</Text>
+      
+      <View style={{ height: 50 }}></View>
+      <Image style={{width: width, height: imageHeight}} 
+        source={require('./assets/Q10.png')} />
+      
+      <View style={{ height: 70 }}></View>
+      <View style={{margin:10, flexDirection:"row"}}>
+        
+      <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            setCount10((prevCount) => {
+              const updatedCount = prevCount + 1;
+              navigation.navigate('Result', { count10: updatedCount });
+              return updatedCount;
+            });
+          } } >
+          <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 50 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={ function(){ 
+            navigation.navigate('Result', { count10 } ); 
+            } } >
+            <Text style={{ color: 'white', fontSize: 30 }}>아니요</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+
+function ResultScreen({ navigation, route }) {
+
+  const { count10 } = route.params;
+
+  if ( count10>=0 && count10<=3 ) {
     navigation.navigate('MZ');
-  } else if ( count6>0 && count6<=3) {
+  } else if ( count10>=4 && count10<=7) {
     navigation.navigate('Middle');
   } else {
     navigation.navigate('Absolute');
@@ -378,6 +551,10 @@ export default function App() {
         <Stack.Screen name="Test4" component={TestScreen4} />
         <Stack.Screen name="Test5" component={TestScreen5} />
         <Stack.Screen name="Test6" component={TestScreen6} />
+        <Stack.Screen name="Test7" component={TestScreen7} />
+        <Stack.Screen name="Test8" component={TestScreen8} />
+        <Stack.Screen name="Test9" component={TestScreen9} />
+        <Stack.Screen name="Test10" component={TestScreen10} />
         <Stack.Screen name="Result" component={ResultScreen} />
         <Stack.Screen name="MZ" component={MZScreen} />
         <Stack.Screen name="Middle" component={MiddleScreen} />
