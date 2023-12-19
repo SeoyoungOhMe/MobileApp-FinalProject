@@ -60,7 +60,22 @@ function TestScreen1({ navigation }) {
           <Text style={{ color:'white', fontSize: 30 }}>네</Text>
       </TouchableOpacity>
 
-      <View style={{width:50}}></View>
+      <View style={{width:10}}></View>
+
+      <TouchableOpacity
+        style={[styles.buttonContainer, {backgroundColor: 'blue'}]}
+        onPress={() => {
+          setCount((prevCount) => {
+            const updatedCount = prevCount + 0.5;
+            navigation.navigate('Test2', {count: updatedCount});
+            return updatedCount;
+          });
+        }}>
+
+        <Text style={{color: 'white', fontSize: 30}}>보통</Text>
+      </TouchableOpacity>
+
+      <View style={{width:10}}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -69,6 +84,8 @@ function TestScreen1({ navigation }) {
           } } >
             <Text style={{ color: 'white', fontSize: 30  }}>아니요</Text>
         </TouchableOpacity>  
+
+      
 
       </View>
     </View>
@@ -104,7 +121,21 @@ function TestScreen2({ navigation, route }) {
         <Text style={{ color:'white', fontSize: 30 }}>네</Text>
       </TouchableOpacity>
 
-      <View style={{width:50}}></View>
+      <View style={{width:10}}></View>
+
+      <TouchableOpacity
+    style={[styles.buttonContainer, {backgroundColor: 'blue'}]}
+    onPress={() => {
+      setCount2((prevCount) => {
+        const updatedCount = prevCount + 0.5;
+        navigation.navigate('Test3', {count2: updatedCount});
+        return updatedCount;
+      });
+    }}>
+    <Text style={{color: 'white', fontSize: 30}}>보통</Text>
+  </TouchableOpacity>
+
+  <View style={{width: 10}}></View>
 
       <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -147,7 +178,21 @@ function TestScreen3({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount3((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test4', { count3: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -190,7 +235,21 @@ function TestScreen4({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount4((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test5', { count4: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -233,7 +292,21 @@ function TestScreen5({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount5((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test6', { count5: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -276,7 +349,21 @@ function TestScreen6({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount6((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test7', { count6: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -319,7 +406,21 @@ function TestScreen7({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount7((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test8', { count7: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -362,7 +463,21 @@ function TestScreen8({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount8((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test9', { count8: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -405,7 +520,21 @@ function TestScreen9({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount9((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Test10', { count9: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -448,7 +577,21 @@ function TestScreen10({ navigation, route }) {
           <Text style={{ color: 'white', fontSize: 30 }}>네</Text>
         </TouchableOpacity>
 
-        <View style={{ width: 50 }}></View>
+        <View style={{ width: 10 }}></View>
+
+        <TouchableOpacity
+          style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
+          onPress={() => {
+            setCount10((prevCount) => {
+              const updatedCount = prevCount + 0.5;
+              navigation.navigate('Result', { count10: updatedCount });
+              return updatedCount;
+            });
+          }}>
+          <Text style={{ color: 'white', fontSize: 30 }}>보통</Text>
+        </TouchableOpacity>
+
+        <View style={{ width: 10 }}></View>
 
         <TouchableOpacity
           style={[styles.buttonContainer, { backgroundColor: 'blue' }]}
@@ -469,7 +612,7 @@ function ResultScreen({ navigation, route }) {
 
   if ( count10>=0 && count10<=3 ) {
     navigation.navigate('MZ');
-  } else if ( count10>=4 && count10<=7) {
+  } else if ( count10>3 && count10<=7) {
     navigation.navigate('Middle');
   } else {
     navigation.navigate('Absolute');
