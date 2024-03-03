@@ -4,8 +4,11 @@
 
 ## Stacks
 ### Development
-- React-Native
-- JavaScript
+<div>
+<img src="https://img.shields.io/badge/javascript-007396?style=flat-square&logo=javascript&logoColor=white">
+  <img src="https://img.shields.io/badge/ReactNative-Yellow?style=flat-square&logo=reactNative&logoColor=black">
+</div>    
+
 ### Environment
 - Expo CLI(Expo Go)
 - Visual Studio Code
